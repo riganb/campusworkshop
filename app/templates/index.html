@@ -101,15 +101,15 @@
                     <td>{{item.task}}</td>
                     {% if item.status == "Todo" %}
                     <td><button type="button" class="btn btn-outline-primary btn-sm state"
-                            data-source="{{item.id}}">{{item.status}}</button></td>
+                            data-source="{{item.id}}" data-content="{{item.status}}">{{item.status}}</button></td>
                     {%endif%}
                     {% if item.status == "In Progress" %}
                     <td><button type="button" class="btn btn-outline-success btn-sm state"
-                            data-source="{{item.id}}">{{item.status}}</button></td>
+                            data-source="{{item.id}}" data-content="{{item.status}}">{{item.status}}</button></td>
                     {%endif%}
                     {% if item.status == "Completed" %}
-                    <td><button type="button" class="btn btn-outline-danger btn-sm state" disabled
-                            data-source="{{item.id}}">{{item.status}}</button></td>
+                    <td><button type="button" class="btn btn-outline-danger btn-sm state"
+                            data-source="{{item.id}}" data-content="{{item.status}}" disabled>{{item.status}}</button></td>
                     {%endif%}
 
                     <td><button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal"
@@ -117,8 +117,7 @@
                                 class="fa fa-pen fa-1" aria-hidden="true"></i></button></td>
 
                     <td><button class="btn btn-outline-secondary btn-sm remove" data-source="{{item.id}}"
-                            type="button"><i
-                            class="fa fa-trash fa-1" aria-hidden="true"></i></button></td>
+                            type="button"><i class="fa fa-trash fa-1" aria-hidden="false"></i></button></td>
                 </tr>
                 {% endfor %}
 
